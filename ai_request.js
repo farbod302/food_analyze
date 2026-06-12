@@ -46,11 +46,12 @@ async function analyzeFoodCollage(imagePath) {
           content: [
             {
               type: 'text',
-              text: `Analyze this collage of meal photos. Estimate the following and return JSON with these exact keys:
-- "approximate_protein_grams": total approximate protein consumed across all meals in grams (number)
-- "approximate_calories": total approximate calories received from these foods (number)
-- "vegetable_types_count": number of different types of vegetables consumed (number)
-- "vegetable_types": array of identified vegetable names in English (string[])
+              text: `Analyze this collage of meal photos. Estimate the total nutritional values across all meals and return JSON with these exact keys:
+- "calories_kcal": total approximate calories in kcal (number)
+- "protein_g": total approximate protein in grams (number)
+- "fat_g": total approximate fat in grams (number)
+- "carbohydrates_g": total approximate carbohydrates in grams (number)
+- "fiber_g": total approximate fiber in grams (number)
 
 Return only valid JSON, no markdown.`,
             },
