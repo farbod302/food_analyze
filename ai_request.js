@@ -53,6 +53,8 @@ async function analyzeFoodCollage(imagePath) {
 - "carbohydrates_g": total approximate carbohydrates in grams (number)
 - "fiber_g": total approximate fiber in grams (number)
 
+Round every numeric value to the nearest multiple of 5 (e.g. 121 → 120, 124 → 125, 122 → 120, 123 → 125).
+
 Return only valid JSON, no markdown.`,
             },
             {
