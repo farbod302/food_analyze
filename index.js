@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 // const http = require('http');
+const cors = require('cors');
+
 const express = require('express');
 const processFoodReview = require('./process_food_review');
 
@@ -12,7 +14,7 @@ const CERT_DIR = path.join(__dirname, 'certs');
 
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
